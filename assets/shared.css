@@ -1,0 +1,138 @@
+:root {
+  --background: #FAF3EA;
+  --card: #FFFAF7;
+  --earth-green: #879E7A;
+  --earth-brown: #996B6B;
+  --earth-orange: #D1AD84;
+  --text: #2B2926;
+  --muted: #6F6760;
+  --border: rgba(43, 41, 38, 0.12);
+  --shadow: 0 18px 45px rgba(83, 63, 45, 0.12);
+  --radius-lg: 22px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #202225;
+    --card: #2E3033;
+    --earth-green: #7D9470;
+    --earth-brown: #8F7D61;
+    --earth-orange: #C7A37A;
+    --text: #F5EFE7;
+    --muted: #C8BFB5;
+    --border: rgba(245, 239, 231, 0.12);
+    --shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(209, 173, 132, 0.24), transparent 34rem),
+    radial-gradient(circle at top right, rgba(135, 158, 122, 0.20), transparent 32rem),
+    var(--background);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(255, 250, 247, 0.72);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.brand-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.26);
+  display: block;
+}
+
+.brand-name {
+  font-size: 1.2rem;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+}
+
+nav a {
+  padding: 9px 13px;
+  border-radius: 999px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  background: rgba(135, 158, 122, 0.14);
+  color: var(--text);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 28px 0 42px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+@media (prefers-color-scheme: dark) {
+  .brand-icon {
+    background: rgba(46, 48, 51, 0.72);
+  }
+}
+
+@media (max-width: 640px) {
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
