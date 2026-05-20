@@ -88,6 +88,21 @@ h1 {
   display: block;
 }
 
+/* Temporary placeholder until App Store URL is available; then restore .app-store-button badge markup in index.html. */
+.coming-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 250, 247, 0.8);
+  color: var(--text);
+  font-weight: 650;
+  font-size: 0.95rem;
+}
+
 .screenshot-stack {
   position: relative;
   width: 100%;
