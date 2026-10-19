@@ -26,27 +26,27 @@
     <main>
       <article>
         <h1>Wanderbuch Privacy Policy</h1>
-        <p class="meta"><strong>Last updated:</strong> May 18, 2026</p>
+        <p class="meta"><strong>Last updated:</strong> September 22, 2026</p>
 
-        <p>Wanderbuch is designed as a private, local-first hiking logbook. The app does not collect, sell, or transmit your personal data to external servers.</p>
+        <p>Wanderbuch is designed as a private, local-first hiking logbook. The app does not operate a user account or backend service for your app data. The normal app database may be mirrored to your private iCloud database through Apple&rsquo;s managed CloudKit service.</p>
 
         <h2>Data Used by the App</h2>
         <p>Wanderbuch may access the following data only with your permission:</p>
         <ul>
-          <li><strong>Location</strong>: Used only while the app is open to show your current position on maps. Your current location is not saved or shared.</li>
-          <li><strong>Health data</strong>: Wanderbuch can read workout and fitness data from Apple Health, such as hiking workouts, workout routes, heart rate, active and resting energy, steps, effort data, duration, distance, and elevation. This data is used only to turn existing workouts into hike memories with maps and stats inside the app. Wanderbuch does not record workouts or write data to Apple Health.</li>
+          <li><strong>Location</strong>: Used while the app is open to show your current position on maps. Wanderbuch does not save the current device location. When you use place enrichment for a selected coordinate, Wanderbuch sends that latitude and longitude, together with the requested locale, over HTTPS to the approved Nominatim-compatible endpoint at <code>nominatim.openstreetmap.org</code> to obtain a place name, address context, and map symbol. The remote service configuration may temporarily disable this enrichment; coordinate-only spot creation continues to work when it is disabled. Locations and visit times that you save in hikes, hiking spots, or encounters may be mirrored to your private iCloud database.</li>
+          <li><strong>Health data</strong>: Wanderbuch can read workout and fitness data from Apple Health, such as hiking workouts, workout routes, heart rate, active and resting energy, steps, effort data, duration, distance, and elevation. This data is used only to turn existing workouts into hike memories with maps and stats inside the app. App-derived hike details such as distance or length, duration or time, and elevation, together with a workout UUID reference, may be stored in hike records and mirrored to your private iCloud database. Raw HealthKit samples and workout route payloads are not synchronized by Wanderbuch. Wanderbuch does not record workouts or write data to Apple Health.</li>
           <li><strong>Route data</strong>: Route information from workouts may be cached locally to show hike maps and summaries.</li>
-          <li><strong>User content</strong>: Hike names, notes, and other information you enter are stored locally on your device.</li>
-          <li><strong>Photos</strong>: If you choose to grant photo access, Wanderbuch may access selected photos and videos to show media for a hike in hike details and maps, and to let you choose a cover photo. Media is not uploaded, copied, or stored by the app.</li>
+          <li><strong>User content</strong>: Hike names, notes, metrics, hiking spots, and spot encounters are stored locally on your device and may be mirrored to your private iCloud database.</li>
+          <li><strong>Photos</strong>: If you choose to grant photo access, Wanderbuch may access selected photos and videos to show media for a hike in hike details and maps, and to let you choose a cover photo. Original Photos assets and videos are not uploaded by Wanderbuch. A bounded cover preview and Photos cloud reference may be stored in the app database and mirrored to your private iCloud database.</li>
         </ul>
 
         <h2>Storage</h2>
-        <p>All app data is stored locally on your device. Wanderbuch does not use user accounts, external servers, or a backend service.</p>
-        <p>Future versions may add optional iCloud sync for non-health data. If this changes, this policy will be updated.</p>
+        <p>App-owned hike, hiking-spot, and spot-encounter records are stored locally on your device and may be mirrored asynchronously to your private iCloud database. Apple manages account access, transport, retries, and delivery between your devices. Local use continues when iCloud is unavailable. Wanderbuch does not operate a user account, external server, or backend service for this data.</p>
+        <p>Original Photos assets, HealthKit samples and workout route payloads, the bundled OSM database, caches, settings, and persistent-history metadata are not mirrored by Wanderbuch.</p>
 
         <h2>Sharing and Tracking</h2>
-        <p>Wanderbuch does not share your personal data with third parties, sell your data, use advertising, track you across apps or websites, or use analytics services.</p>
-        <p>The app uses Apple MapKit for map display. Apple may process map-related data according to Apple’s own privacy policies.</p>
+        <p>Wanderbuch does not sell your data, use advertising, track you across apps or websites, or use analytics services.</p>
+        <p>When you use place enrichment, the selected coordinate and locale are shared with the approved Nominatim-compatible service at <code>nominatim.openstreetmap.org</code>. The app validates the recipient; remote configuration can change only whether the feature is enabled and its request rate, not the recipient. The app also uses Apple MapKit for map display. Apple may process map-related data according to Apple&rsquo;s own privacy policies.</p>
 
         <h2>Permissions</h2>
         <p>Wanderbuch may request access to Location, Health, Notifications, and Photos. Notifications are used for local reminders when a new hiking workout is found in Apple Health. You can manage or revoke these permissions at any time in iOS Settings.</p>
@@ -55,7 +55,7 @@
         <p>Wanderbuch is intended for general audiences and does not knowingly collect personal data from children.</p>
 
         <h2>Your Control</h2>
-        <p>Because data is stored locally, you can delete your app data by deleting the app from your device. You can also revoke permissions in iOS Settings.</p>
+        <p>You can delete app records from within Wanderbuch. Deleting a mirrored record may synchronize that deletion to your other devices. Deleting the app does not guarantee deletion of data already stored in private CloudKit. You can also revoke permissions in iOS Settings.</p>
 
         <h2>Contact</h2>
         <p>If you have any questions about this Privacy Policy, please contact:</p>
